@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://trvd32pxh6cf"]
+
+[ext_resource type="Script" path="res://Scripts/View/leaderboard_item.gd" id="1_ewmif"]
+
+[node name="LeaderboardItem" type="PanelContainer"]
+offset_right = 199.0
+offset_bottom = 23.0
+script = ExtResource("1_ewmif")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="PlayerNameLabel" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Player Name"
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerScoreLabel" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Player Score"
+vertical_alignment = 1
