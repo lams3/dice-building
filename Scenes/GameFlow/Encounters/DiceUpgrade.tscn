@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://rh3xtfl42nxv"]
+[gd_scene load_steps=2 format=3 uid="uid://rh3xtfl42nxv"]
+
+[ext_resource type="Script" path="res://Scripts/View/dice_upgrade.gd" id="1_gh2ot"]
 
 [node name="DiceUpgrade" type="Control"]
 layout_mode = 3
@@ -7,3 +9,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gh2ot")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkipButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Skip"
+
+[connection signal="pressed" from="SkipButton" to="." method="skip"]
