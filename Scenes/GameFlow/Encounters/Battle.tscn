@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cabtf00u61y3l"]
+[gd_scene load_steps=2 format=3 uid="uid://cabtf00u61y3l"]
+
+[ext_resource type="Script" path="res://Scripts/View/battle.gd" id="1_7cm6u"]
 
 [node name="Battle" type="Control"]
 layout_mode = 3
@@ -7,3 +9,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7cm6u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WinButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Win"
+
+[node name="LoseButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Lose"
+
+[connection signal="pressed" from="HBoxContainer/WinButton" to="." method="trigger_win"]
+[connection signal="pressed" from="HBoxContainer/LoseButton" to="." method="trigger_lose"]
