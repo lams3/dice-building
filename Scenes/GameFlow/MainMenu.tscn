@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv6dw7ooc1aqs"]
+[gd_scene load_steps=2 format=3 uid="uid://bv6dw7ooc1aqs"]
 
-[ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="1_j42rg"]
-[ext_resource type="PackedScene" uid="uid://d0i56mtd6ypfp" path="res://Scenes/GameFlow/PathSelection.tscn" id="2_buh02"]
-[ext_resource type="PackedScene" uid="uid://cyfnuabjjl2o6" path="res://Scenes/GameFlow/Leaderboard.tscn" id="3_tr5pm"]
+[ext_resource type="Script" path="res://Scripts/View/main_menu.gd" id="1_j42rg"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,8 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j42rg")
-new_game_scene = ExtResource("2_buh02")
-leaderboard_scene = ExtResource("3_tr5pm")
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="Panel" parent="."]
